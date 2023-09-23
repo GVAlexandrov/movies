@@ -1,17 +1,18 @@
 import './Navigation.css';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Movies</li>
+                <li><NavLink to={'/home'}>Home</NavLink></li>
+                <li><NavLink to={'/movies'}>Movies</NavLink></li>
 
-                <li>Register</li>
-                <li>Login</li>
+                <li><NavLink to={'/register'}>Register</NavLink></li>
+                <li><NavLink to={'/login'}>Login</NavLink></li>
 
-                <li>My movies</li>
-                <li>Logout</li>
+                <li><NavLink to={'/my-movies'}>My movies</NavLink></li>
+                <li><NavLink to={'/'}>Logout</NavLink></li>
             </ul>
         </nav>
     )
