@@ -6,9 +6,12 @@ const Navigation = () => {
             <ul>
                 <li>Home</li>
                 <li>Movies</li>
+
                 <li>Register</li>
                 <li>Login</li>
+
                 <li>My movies</li>
+                <li>Logout</li>
             </ul>
         </nav>
     )
