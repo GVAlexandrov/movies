@@ -10,6 +10,20 @@ html{
   /* border-bottom:inherit; */
 }
 
+:root{
+  --height-nav: 40px;
+  --background-color-01:rgb(28, 28, 28);
+}
+
 .App {
   text-align: center;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(min(100vh - (100px)));
+  padding-top: 100px ;
+  background-color: var(--background-color-01);
+  color: white;
 }
