@@ -1,26 +1,37 @@
 nav {
     position: fixed;
     width: 100%;
-    height: 28px;
+    height: 60px;
     top: 30px;
     z-index: 10px;
-    border: 1px solid;
-    
-    ul {
-        position: relative;
-        list-style:none;
-        text-align:center;
-        padding: 0px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 
     
+    ul {
+        width: 100%;
+        position: fixed;
+        list-style:none;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        height: 60px;
+
+                
         li {
-            display: inline-block;
-            margin: 0px 10px;
+            display: flex;
+            align-items: center;
+            padding: 0px 15px;
             cursor: pointer;
         }
     
         li:hover{
-            background-color: white;
+            background-color: rgb(28, 28, 28);
+            /* color: red; */
         }
     }
 }
