@@ -1,6 +1,8 @@
 main {
-    background-color: whitesmoke;
     width: 100%;
-    height: calc(100vh - 100px - 60px);
-    padding-top: 60px ;
+    height: 100vh;
+    height: calc(min(100vh - (100px)));
+    padding-top: 100px ;
+    background-color: rgb(28, 28, 28);
+    color: white;
 }
