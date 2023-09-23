@@ -4,7 +4,8 @@ import Navigation from '../Navigation/Navigation';
 const Header = () => {
     return (
         <>
-            <header>MOVIES APP</header>
+            <header className='header'>MOVIES APP</header>
+
             <Navigation />
         </>
     )
