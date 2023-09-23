@@ -1,0 +1,12 @@
+footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+
+    background-color: yellow;
+}
+
+footer:hover{
+    background-color: red;
+}

@@ -1,0 +1,6 @@
+main {
+    background-color: whitesmoke;
+    width: 100%;
+    height: calc(100vh - 100px - 60px);
+    padding-top: 60px ;
+}
