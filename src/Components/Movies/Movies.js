@@ -1,10 +1,12 @@
 import './Movies.css';
+import MovieCard from '../MovieCard/MovieCard';
 
 const Movies = () => {
+
+    let numberMovies = 3;
+
     return (
-        <>
-            <h1>MOVIES</h1>
-        </>
+        <MovieCard />
     )
 }
 
