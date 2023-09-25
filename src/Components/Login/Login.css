@@ -1,9 +1,39 @@
-header {
-    position: fixed;
-    width: 100%;
-    height: 30px;
-    top: 0px;
-    z-index: 10px;
-    background-color: rgb(28, 28, 28);
+form {
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+form div {
+    display: table-row;
+
+    
+}
+
+form label,
+form input {
+    display: table-cell;
+    margin-bottom: 15px;
+}
+
+form label {
+    width: 120px;
+    padding-right: 5%;
+    text-align: left;
+}
+
+form input {
+    width: 200px;
     color: white;
+    background-color: black;
+}
+
+form input:focus {
+    border-color: red;
+}
+
+form p {
+    display: table-caption;
 }
