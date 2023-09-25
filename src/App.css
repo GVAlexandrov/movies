@@ -1,5 +1,6 @@
 html{
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 *,
@@ -11,7 +12,9 @@ html{
 }
 
 :root{
-  --height-nav: 40px;
+  --height-header: 50px;
+  --height-nav: 50px;
+  --height-footer: 100px;
   --background-color-01:rgb(28, 28, 28);
 }
 
@@ -20,6 +23,9 @@ html{
 }
 
 main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   min-height: calc(min(100vh - (100px)));

@@ -1,12 +1,12 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Movies from './Components/Movies/Movies';
-import Register from './Components/Register/Register';
+import MyMovies from './Components/MyMovies/MyMovies';
 import Login from './Components/Login/Login';
-import MyMovies from './Components/Movies copy/MyMovies';
+import Register from './Components/Register/Register';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <main>
 
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/movies' element={<Movies />} />
           <Route path='/my-movies' element={<MyMovies />} />
