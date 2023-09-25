@@ -1,9 +1,10 @@
+import FormLoginRegister from '../FormLoginRegister/FormLoginRegister';
 import './Register.css';
 
 const Register = () => {
     return (
         <>
-            <h1>REGISTER</h1>
+            <FormLoginRegister />
         </>
     )
 }
