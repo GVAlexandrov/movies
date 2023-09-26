@@ -4,8 +4,7 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Movies from './Components/Movies/Movies';
 import MyMovies from './Components/MyMovies/MyMovies';
-import Login from './Components/Login/Login';
-import Register from './Components/Register/Register';
+import LoginRegister from './Components/LoginRegister/LoginRegister';
 import Footer from './Components/Footer/Footer';
 
 function App() {
@@ -21,8 +20,8 @@ function App() {
           <Route path='/movies' element={<Movies />} />
           <Route path='/my-movies' element={<MyMovies />} />
 
-          <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<LoginRegister />} />
+          <Route path='/register' element={<LoginRegister />} />
         </Routes>
 
       </main>
