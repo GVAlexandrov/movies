@@ -1,0 +1,55 @@
+form {
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+form div {
+    display: table-row;
+    height: 20px;    
+}
+
+form label,
+form input {
+    display: table-cell;
+    margin-bottom: 15px;
+    height: 25px; 
+}
+
+form label {
+    width: 120px;
+    padding-right: 5%;
+    text-align: left;
+}
+
+form input {
+    width: 200px;
+    color: white;
+    background-color: black;
+    border: 0px;
+}
+
+form input:focus {
+    border-color: red;
+}
+
+form p {
+    display: table-caption;
+}
+
+form button {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: red;
+}
