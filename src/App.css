@@ -32,4 +32,17 @@ main {
   padding-top: 100px ;
   background-color: var(--background-color-01);
   color: white;
+
+  
+  /* BACKGROUND PATTERN */
+    --s: 50px; /* control the size */
+    --c: #000000;
+    
+    --_l: #0000 46%,var(--c) 47% 53%,#00000000 54%;
+    background:
+      radial-gradient(100% 100% at 100% 100%,var(--_l)) var(--s) var(--s),
+      radial-gradient(100% 100% at 0    0   ,var(--_l)) var(--s) var(--s),
+      radial-gradient(100% 100%,#0000 22%,var(--c) 23% 29%, #0000 30% 34%,var(--c) 35% 41%,#0000 42%)
+      var(--background-color-01);
+    background-size: calc(var(--s)*2) calc(var(--s)*2);
 }
