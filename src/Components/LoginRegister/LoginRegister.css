@@ -4,6 +4,8 @@ form {
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: var(--background-color-01);
+    background-color: black;
 }
 
 form div {
@@ -28,7 +30,8 @@ form input {
     width: 200px;
     color: white;
     background-color: black;
-    border: 0px;
+    border-width: 1px;
+    border-color: white;
 }
 
 form input:focus {
@@ -47,7 +50,7 @@ form button {
     border: 0px;
     border-radius: 10px;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 form button:hover {
