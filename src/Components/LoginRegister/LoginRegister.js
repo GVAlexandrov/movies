@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './LoginRegister.css';
 import validate from '../../validations/authValidations';
-import { activeUser, login } from '../../services/authService';
+import { activeUser, login, register } from '../../services/authService';
+import { useNavigate } from 'react-router-dom';
 
 const LoginRegister = () => {
     const [credentials, setCredentials] = useState({
@@ -9,6 +10,7 @@ const LoginRegister = () => {
         pass: ''
     });
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     let location = window.location.pathname.slice(1);
 
@@ -52,6 +54,14 @@ const LoginRegister = () => {
 
             return;
         }
+
+        register(credentials.email, credentials.pass)
+            .then(response => {
+                activeUser(response?.user.uid, response?.user.email);
+                return;
+            })
+            .then(() => navigate('/'))
+            .catch(error => console.log(error));
     }
 
 
