@@ -6,11 +6,20 @@ import Movies from './Components/Movies/Movies';
 import MyMovies from './Components/MyMovies/MyMovies';
 import LoginRegister from './Components/LoginRegister/LoginRegister';
 import Footer from './Components/Footer/Footer';
+import { useEffect, useState } from 'react';
+import { auth } from './firebaseConfig/firebaseInit';
 
 function App() {
+  const [userEmail, setUserEmail] = useState(null);
+
+  useEffect(() => {
+    auth.onAuthStateChanged(setUserEmail);
+  }, [])
+
+
   return (
     <div className="App">
-      <Header />
+      <Header userEmail={userEmail} setUserEmail={setUserEmail} />
 
       <main>
 

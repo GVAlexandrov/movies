@@ -16,6 +16,7 @@ html{
   --height-nav: 50px;
   --height-footer: 100px;
   --background-color-01:rgb(28, 28, 28);
+  --background-color-02:rgba(0,0,0,0.55);
 }
 
 .App {
