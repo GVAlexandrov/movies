@@ -1,5 +1,14 @@
 div.div-movie-card {
     width: 200px;
-    height: 400px;
-    border: 1px solid red;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--background-color-02);
+
+    
+}
+
+div.div-movie-card:hover{
+    box-shadow: 1px 1px 5px red;
+    cursor: pointer;
 }
