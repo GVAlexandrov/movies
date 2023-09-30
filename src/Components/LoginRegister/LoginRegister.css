@@ -5,7 +5,8 @@ form {
     border: 1px solid black;
     border-radius: 10px;
     background-color: var(--background-color-01);
-    background-color: black;
+    background-color: var(--background-color-02);
+    box-shadow: 1px 1px 5px red;
 }
 
 form div {

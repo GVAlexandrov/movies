@@ -14,6 +14,7 @@ const LoginRegister = () => {
 
     let location = window.location.pathname.slice(1);
 
+
     const onLogin = (e) => {
         e.preventDefault();
 
@@ -34,6 +35,7 @@ const LoginRegister = () => {
                 activeUser(response.user.uid, response.user.email);
                 return;
             })
+            .then(() => navigate('/my-movies'))
             .catch(error => console.log(error));
     }
 
