@@ -1,12 +1,20 @@
 import './Header.css';
 import Navigation from '../Navigation/Navigation';
 
-const Header = () => {
+const Header = ({ userEmail, setUserEmail }) => {
     return (
         <>
-            <header className='header'>MOVIES APP</header>
+            <header className='header'>MOVIES APP, Hello, {
+                userEmail !== null
+                    ? localStorage.getItem('email')
+                    : 'Guest'
+            }
+            </header>
 
-            <Navigation />
+            <Navigation
+                userEmail={userEmail}
+                setUserEmail={setUserEmail}
+            />
         </>
     )
 }
