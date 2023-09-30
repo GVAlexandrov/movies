@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './LoginRegister.css';
 import validate from '../../validations/authValidations';
+import { activeUser, login } from '../../services/authService';
 
 const LoginRegister = () => {
     const [credentials, setCredentials] = useState({
@@ -25,6 +26,13 @@ const LoginRegister = () => {
 
             return;
         }
+
+        login(credentials.email, credentials.pass)
+            .then(response => {
+                activeUser(response.user.uid, response.user.email);
+                return;
+            })
+            .catch(error => console.log(error));
     }
 
     const onRegister = (e) => {
