@@ -24,9 +24,12 @@ html{
 }
 
 main {
-  display: flex;
+  display: grid;
+  gap: 50px 20px;
+  grid-template-columns: 200px 200px 200px;
   justify-content: space-around;
   align-items: center;
+
   width: 100%;
   min-height: 100vh;
   min-height: calc(min(100vh - (100px)));
