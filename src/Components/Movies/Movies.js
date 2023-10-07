@@ -5,7 +5,13 @@ const Movies = () => {
 
 
     return (
-        <MovieCard />
+        <>
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+        </>
     )
 }
 
