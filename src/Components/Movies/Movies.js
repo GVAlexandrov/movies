@@ -5,13 +5,13 @@ const Movies = () => {
 
 
     return (
-        <>
+        <div className='MoviesWrapper'>
             <MovieCard />
             <MovieCard />
             <MovieCard />
             <MovieCard />
             <MovieCard />
-        </>
+        </div>
     )
 }
 

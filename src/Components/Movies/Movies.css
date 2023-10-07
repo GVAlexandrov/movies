@@ -1,0 +1,6 @@
+.MoviesWrapper{
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px 20px;
+}
