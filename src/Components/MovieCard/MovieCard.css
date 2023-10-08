@@ -5,7 +5,11 @@ div.div-movie-card {
     border-radius: 10px;
     background-color: var(--background-color-02);
 
-    
+    img{
+        width: 100%;
+        /* height: 150px; */
+        background-color: var(--background-color-02);
+    }
 }
 
 div.div-movie-card:hover{
