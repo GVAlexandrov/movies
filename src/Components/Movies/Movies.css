@@ -1,9 +1,38 @@
+.search{
+    margin: 10px 0px;
+    display: block;
+    position: sticky;
+    top: calc(var(--height-header) + var(--height-nav) + 10px);
+}
+
+.search input {
+    width: 300px;
+    height: 30px;
+    color: white;
+    background-color: var(--background-color-02);
+    border-width: 1px;
+    border-color: white;
+    border-radius: 3px;
+}
+
+.search input:focus {
+    border-color: red;
+}
+
 .MoviesWrapper{
+    width: 100%;
+    justify-content:center;
     margin: 20px 0px;
     display: grid;
-    grid-template-columns: repeat(3, 220px);;
+    grid-template-columns: repeat(4, 220px);;
     gap: 30px 20px;
 }
+
+@media screen and (max-width: 1200px) {
+    .MoviesWrapper{
+        grid-template-columns: repeat(3, 220px);;
+    }
+  }
 
 @media screen and (max-width: 800px) {
     .MoviesWrapper{
@@ -13,6 +42,6 @@
 
 @media screen and (max-width: 560px) {
     .MoviesWrapper{
-        grid-template-columns: repeat(1, 220px);;
+        grid-template-columns: repeat(1, 200px);;
     }
   }
