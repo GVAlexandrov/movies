@@ -7,6 +7,7 @@ const API_URL = 'http://www.omdbapi.com?apikey=b02986ff';
 
 const Movies = () => {
     let [movies, setMovies] = useState([]);
+    let [searchedMovie, setSearchedMovie] = useState('');
 
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
@@ -14,22 +15,29 @@ const Movies = () => {
         setMovies(result.Search);
     }
 
-    movies.forEach(movieObj => {
-        console.log(movieObj);
-    });
-
     useEffect(() => {
-        searchMovies('batman');
-    }, []);
+        searchMovies(searchedMovie);
+    }, [searchedMovie]);
+
+    console.log(searchedMovie);
 
     return (
-        <div className='MoviesWrapper'>
-            {
-                movies?.map((movieObj) => {
-                    return <MovieCard movieObj={movieObj} />
-                })
-            }
-        </div>
+        <>
+            <div className='search'>
+                <input
+                    placeholder='Search for movies'
+                    value={searchedMovie}
+                    onChange={(e) => { setSearchedMovie(e.target.value) }}
+                />
+            </div>
+            <div className='MoviesWrapper'>
+                {
+                    movies?.map((movieObj) => {
+                        return <MovieCard movieObj={movieObj} />
+                    })
+                }
+            </div>
+        </>
     )
 }
 
