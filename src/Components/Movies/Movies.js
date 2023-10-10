@@ -10,9 +10,13 @@ const Movies = () => {
     let [searchedMovie, setSearchedMovie] = useState('');
 
     const searchMovies = async (title) => {
-        const response = await fetch(`${API_URL}&s=${title}`);
-        const result = await response.json();
-        setMovies(result.Search);
+        try {
+            const response = await fetch(`${API_URL}&s=${title}`);
+            const result = await response.json();
+            setMovies(result.Search);
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     useEffect(() => {
@@ -30,6 +34,7 @@ const Movies = () => {
                     onChange={(e) => { setSearchedMovie(e.target.value) }}
                 />
             </div>
+
             <div className='MoviesWrapper'>
                 {
                     movies?.map((movieObj) => {
