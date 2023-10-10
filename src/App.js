@@ -8,6 +8,7 @@ import LoginRegister from './Components/LoginRegister/LoginRegister';
 import Footer from './Components/Footer/Footer';
 import { useEffect, useState } from 'react';
 import { auth } from './firebaseConfig/firebaseInit';
+import MoviePage from './Components/MoviePage/MoviePage';
 
 function App() {
   const [userEmail, setUserEmail] = useState(null);
@@ -28,6 +29,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/movies' element={<Movies />} />
           <Route path='/my-movies' element={<MyMovies />} />
+          <Route path='/my-movies/movie/:id' element={<MoviePage />} />
 
           <Route path='/login' element={<LoginRegister />} />
           <Route path='/register' element={<LoginRegister />} />
