@@ -1,8 +1,9 @@
 .search{
-    margin: 10px 0px;
+    margin: 0px 0px;
     display: block;
-    position: sticky;
+    position: fixed;
     top: calc(var(--height-header) + var(--height-nav) + 10px);
+    z-index: 2;
 }
 
 .search input {
@@ -20,9 +21,10 @@
 }
 
 .MoviesWrapper{
+    max-width: 1300px;
     width: 100%;
     justify-content:center;
-    margin: 20px 0px;
+    margin: 60px 0px;
     display: grid;
     grid-template-columns: repeat(4, 220px);;
     gap: 30px 20px;
