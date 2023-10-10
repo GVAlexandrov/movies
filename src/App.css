@@ -24,12 +24,14 @@ html{
 }
 
 main {
-  justify-content: space-around;
+  padding-top: 100px ;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
   min-height: calc(min(100vh - (100px)));
-  padding-top: 100px ;
   background-color: var(--background-color-01);
   color: white;
 
