@@ -2,12 +2,11 @@ import './Movies.css';
 import MovieCard from '../MovieCard/MovieCard';
 import { useEffect } from 'react';
 import { useState } from 'react';
-
-const API_URL = 'http://www.omdbapi.com?apikey=b02986ff';
+import { API_URL } from '../../utils/utils';
 
 const Movies = () => {
     let [movies, setMovies] = useState([]);
-    let [searchedMovie, setSearchedMovie] = useState('');
+    let [searchedMovie, setSearchedMovie] = useState('Star Wars');
 
     const searchMovies = async (title) => {
         try {
@@ -38,7 +37,7 @@ const Movies = () => {
             <div className='MoviesWrapper'>
                 {
                     movies?.map((movieObj) => {
-                        return <MovieCard movieObj={movieObj} />
+                        return <MovieCard key={movieObj.imdbID} movieObj={movieObj} />
                     })
                 }
             </div>
