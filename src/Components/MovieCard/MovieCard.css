@@ -14,7 +14,7 @@ div.div-movie-card {
 }
 
 div.div-movie-card:hover{
-    transform: scale(1.15);
+    transform: scale(1.10) rotate(3deg);
     box-shadow: 1px 1px 50px red;
     cursor: pointer;
 }
