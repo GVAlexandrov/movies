@@ -1,9 +1,7 @@
 .search{
     margin: 0px 0px;
-    display: block;
-    position: fixed;
-    top: calc(var(--height-header) + var(--height-nav) + 10px);
-    z-index: 2;
+    display: inline-block;
+    margin-top:  20px;
 }
 
 .search input {
@@ -18,6 +16,28 @@
 
 .search input:focus {
     border-color: red;
+
+}
+
+
+.sort-menu{
+    margin: 10px;
+    padding: 5px;
+
+    label{
+        padding: 10px;
+    }
+
+    select{
+        padding: 10px;
+        background-color: var(--background-color-02);
+        color: white;
+        border: none;
+    }
+
+    option{
+        background-color: var(--background-color-02);
+    }
 }
 
 .MoviesWrapper{
