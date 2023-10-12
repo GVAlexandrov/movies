@@ -21,7 +21,11 @@ const MoviePage = () => {
         getMovie(id);
     }, []);
 
-    console.log(movie);
+    // console.log(movie);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 
     return (
         <div className='div-movie-page'>
