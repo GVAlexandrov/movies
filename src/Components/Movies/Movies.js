@@ -22,7 +22,27 @@ const Movies = () => {
         searchMovies(searchedMovie);
     }, [searchedMovie]);
 
-    console.log(searchedMovie);
+    // console.log(movies);
+
+    const sortMovies = (e) => {
+        const sortByArr = e.target.value.split('-');
+        let sortedMovies = [...movies];
+        // console.log(sortByArr[1]);
+
+        if (sortByArr[0] === 'year') {
+            if (sortByArr[1] === 'newest') {
+                sortedMovies = [...movies].sort((a, b) => {
+                    return Number(b.Year) - Number(a.Year)
+                });
+            } else if (sortByArr[1] === 'oldest') {
+                sortedMovies = [...movies].sort((a, b) => {
+                    return Number(a.Year) - Number(b.Year)
+                });
+            }
+        }
+
+        setMovies(sortedMovies);
+    }
 
     return (
         <>
@@ -33,6 +53,19 @@ const Movies = () => {
                     onChange={(e) => { setSearchedMovie(e.target.value) }}
                 />
             </div>
+
+            <div className='sort-menu'>
+                <label htmlFor="sort">Sort by:</label>
+                <select
+                    id="sort"
+                    name="sort"
+                    onChange={sortMovies}
+                >
+                    <option selected value="-" >-</option>
+                    <option value="year-newest">Year (Newest 1st)</option>
+                    <option value="year-oldest">Year (Oldest 1st)</option>
+                </select>
+            </div >
 
             <div className='MoviesWrapper'>
                 {
