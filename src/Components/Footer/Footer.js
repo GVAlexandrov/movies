@@ -24,7 +24,7 @@ const Footer = () => {
                     <p><a href="tel:+359884973116">+359884973116</a></p>
 
                     <p>Address:</p>
-                    <p>Sofia, Bugaria</p>
+                    <p>Sofia, Bulgaria</p>
                 </address>
             </div>
 
