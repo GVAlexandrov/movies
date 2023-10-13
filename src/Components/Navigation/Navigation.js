@@ -1,5 +1,5 @@
-import { logout } from '../../services/authService';
 import './Navigation.css';
+import { logout } from '../../services/authService';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navigation = ({ userEmail, setUserEmail }) => {
