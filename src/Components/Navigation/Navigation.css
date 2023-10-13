@@ -1,10 +1,10 @@
 nav {
-    position: fixed;
+    position: sticky;
     width: 100%;
     height: var(--height-nav);
-    top: var(--height-header);
+    top: 0;
     z-index: 1;
-    background-color: black;
+    background-color: rgb(10, 10, 10);;
     display: flex;
     align-items: center;
     
