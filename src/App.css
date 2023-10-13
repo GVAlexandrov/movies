@@ -12,7 +12,7 @@ html{
 }
 
 :root{
-  --height-header: 50px;
+  --height-header: 70px;
   --height-nav: 50px;
   --height-footer: 300px;
   --background-color-01:rgb(28, 28, 28);
@@ -24,11 +24,11 @@ html{
 }
 
 main {
-  padding-top: 100px ;
+  padding-top: 50px ;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   width: 100%;
   min-height: 100vh;
   min-height: calc(min(100vh - (100px)));
