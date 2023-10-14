@@ -5,6 +5,7 @@ import { activeUser, login, register } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 
 const LoginRegister = () => {
+
     const [credentials, setCredentials] = useState({
         email: '',
         pass: ''
@@ -65,7 +66,6 @@ const LoginRegister = () => {
             .then(() => navigate('/'))
             .catch(error => console.log(error));
     }
-
 
 
     return (
