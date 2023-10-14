@@ -1,6 +1,7 @@
 import './Navigation.css';
 import { logout } from '../../services/authService';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { moveScreenToTop } from '../../utils/utils';
 
 const Navigation = ({ userEmail, setUserEmail }) => {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Navigation = ({ userEmail, setUserEmail }) => {
 
 
     return (
-        <nav>
+        <nav onClick={moveScreenToTop}>
             <ul>
                 <li><NavLink to={'/home'}>Home</NavLink></li>
                 <li><NavLink to={'/movies'}>Movies</NavLink></li>
