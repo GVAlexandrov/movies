@@ -1,11 +1,13 @@
 import './MoviePage.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { API_URL } from '../../utils/utils';
+import { API_URL, moveScreenToTop } from '../../utils/utils';
 
 const MoviePage = () => {
     const { id } = useParams();
-    const [movie, setMovie] = useState({})
+    const [movie, setMovie] = useState({});
+
+    moveScreenToTop();
 
     const getMovie = async (id) => {
         try {
@@ -21,11 +23,6 @@ const MoviePage = () => {
         getMovie(id);
     }, []);
 
-    // console.log(movie);
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
 
     return (
         <div className='div-movie-page'>
