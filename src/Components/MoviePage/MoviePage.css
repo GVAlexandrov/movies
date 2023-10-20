@@ -18,3 +18,18 @@
 .div-movie-page-div-content-info{
     text-align: left; 
 }
+
+@media screen and (max-width: 600px) {
+    .div-movie-page-div-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    img {
+        margin-right: 0px;
+        margin: 0 auto;
+        max-width: 300px;
+        width: 100%;
+        min-width: 250px;
+    }
+}
