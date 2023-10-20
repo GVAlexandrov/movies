@@ -75,10 +75,10 @@ a.active{
         }
 
         ul{
-            display: inherit;
+            display: none;
             flex-direction: column;
             position: absolute;
-            top: -2000px;
+            top: 50px;
             height: 250px;
             background-color: rgb(10, 10, 10);
 
