@@ -15,9 +15,23 @@ const Navigation = ({ userEmail, setUserEmail }) => {
         navigate('/home')
     }
 
+    const togleMenu = (e) => {
+        const element = e.target.className === 'hamburger-navigation'
+            ? e.target
+            : e.target.parentElement;
+        console.log(element.nextElementSibling.style.top);
+    }
+
 
     return (
         <nav onClick={moveScreenToTop}>
+
+            <div className='hamburger-navigation' onClick={togleMenu}>
+                <div className='hamburger-navigation-top'></div>
+                <div className='hamburger-navigation-middle'></div>
+                <div className='hamburger-navigation-bottom'></div>
+            </div>
+
             <ul>
                 <li><NavLink to={'/home'}>Home</NavLink></li>
                 <li><NavLink to={'/movies'}>Movies</NavLink></li>
@@ -25,13 +39,14 @@ const Navigation = ({ userEmail, setUserEmail }) => {
                 {userEmail !== null
                     ? (<>
                         <li><NavLink to={'/my-movies'}>My movies</NavLink></li>
-                        <li><NavLink onClick={logoutHandler} to={'/home'}>Logout</NavLink></li>
+                        <li><NavLink onClick={logoutHandler} to={'/'}>Logout</NavLink></li>
                     </>)
                     : (<>
                         <li><NavLink to={'/register'}>Register</NavLink></li>
                         <li><NavLink to={'/login'}>Login</NavLink></li>
                     </>)}
             </ul>
+
         </nav>
     )
 }
