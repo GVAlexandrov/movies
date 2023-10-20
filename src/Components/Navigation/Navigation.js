@@ -19,7 +19,10 @@ const Navigation = ({ userEmail, setUserEmail }) => {
         const element = e.target.className === 'hamburger-navigation'
             ? e.target
             : e.target.parentElement;
-        console.log(element.nextElementSibling.style.top);
+        console.log(element.nextElementSibling.style.display);
+        (element.nextElementSibling.style.display && element.nextElementSibling.style.display === 'flex')
+            ? element.nextElementSibling.style.display = 'none'
+            : element.nextElementSibling.style.display = 'flex';
     }
 
 
