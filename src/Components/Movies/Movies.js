@@ -22,12 +22,10 @@ const Movies = () => {
         searchMovies(searchedMovie);
     }, [searchedMovie]);
 
-    // console.log(movies);
 
     const sortMovies = (e) => {
         const sortByArr = e.target.value.split('-');
         let sortedMovies = [...movies];
-        // console.log(sortByArr[1]);
 
         if (sortByArr[0] === 'year') {
             if (sortByArr[1] === 'newest') {
