@@ -44,3 +44,9 @@ a.active{
     background-color: var(--background-color-01);
     border-radius: 15px 0px 0px 0px;
 }
+
+@media screen and (max-width: 560px) {
+    nav {
+        display: none;
+    }
+  }
