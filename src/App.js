@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { auth } from './firebaseConfig/firebaseInit';
 import MoviePage from './Components/MoviePage/MoviePage';
 
+
 function App() {
   const [userEmail, setUserEmail] = useState(null);
 
