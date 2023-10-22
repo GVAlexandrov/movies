@@ -14,7 +14,7 @@ const Footer = () => {
                 </p>
             </div>
 
-            <div>
+            <div className='footer-contacts-div'>
                 <h3>Contacts</h3>
                 <address>
                     <p>Email:</p>
@@ -28,7 +28,7 @@ const Footer = () => {
                 </address>
             </div>
 
-            <div>
+            <div className='footer-links-div'>
                 <h3>Links</h3>
                 <a href="https://github.com/GVAlexandrov" target="_blank">My GitHub</a>
             </div>
