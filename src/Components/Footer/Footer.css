@@ -23,7 +23,7 @@ footer .footer-info-div{
     }
 }
 
-div:hover{
+footer div:hover{
     background-color: var(--background-color-01);
 }
 
@@ -40,7 +40,7 @@ div:hover{
             }
         }
 
-        div{
+        footer div{
             width: 100vw;
         }
     }    
