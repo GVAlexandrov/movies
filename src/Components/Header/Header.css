@@ -1,5 +1,4 @@
 header.header {
-    /* position: fixed; */
     width: 100%;
     height: var(--height-header);
     top: 0px;
@@ -7,6 +6,7 @@ header.header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     background-color: black;
     color: white;
