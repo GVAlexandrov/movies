@@ -13,6 +13,7 @@ const MoviePage = () => {
         try {
             const response = await fetch(`${API_URL}&i=${id}`);
             const result = await response.json();
+            console.log(result)
             setMovie(result);
         } catch (error) {
             console.log(error)
@@ -39,6 +40,24 @@ const MoviePage = () => {
                     <p>Plot: {movie.Plot}</p>
                     <p>Director: {movie.Director}</p>
                     <p>Actors: {movie.Actors}</p>
+                </div>
+
+                <div className="like-button">
+                    <h3>Like</h3>
+
+                    <span id={id} className="heart">
+                        <i className="far fa-heart"></i>
+                    </span>
+                </div>
+
+
+                <div className="stars">
+                    <h3>Rate</h3>
+
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                        <div className='star-div' key={value}>★</div>
+                    ))}
+                    <div>10 / 10</div>
                 </div>
             </div>
         </div>
