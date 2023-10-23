@@ -6,9 +6,9 @@ import Movies from './Components/Movies/Movies';
 import MyMovies from './Components/MyMovies/MyMovies';
 import LoginRegister from './Components/LoginRegister/LoginRegister';
 import Footer from './Components/Footer/Footer';
+import MoviePage from './Components/MoviePage/MoviePage';
 import { useEffect, useState } from 'react';
 import { auth } from './firebaseConfig/firebaseInit';
-import MoviePage from './Components/MoviePage/MoviePage';
 
 
 function App() {
