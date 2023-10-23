@@ -32,3 +32,29 @@
         }
     }
 }
+
+.heart {
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+
+    .far:hover {
+        color: red;
+    }
+}
+
+div .stars{
+
+    div.star-div{
+        cursor: pointer;
+        display: inline-block;
+        transform: scale(1.5);
+        margin: 5px;
+        margin-top: 0;
+        color: yellow;
+    }
+
+    div.star-div:hover ~ div.star-div{
+        color: white;
+    }
+}
