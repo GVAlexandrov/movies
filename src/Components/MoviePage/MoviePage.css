@@ -6,7 +6,6 @@
 }
 
 .div-movie-page-div-content{
-    margin-bottom: 50px;
     width: 80%;
     display: flex;
 
@@ -19,24 +18,10 @@
     text-align: left; 
 }
 
-@media screen and (max-width: 600px) {
-    .div-movie-page-div-content {
-        flex-direction: column;
-        text-align: center;
-
-        img {
-            margin-right: 0px;
-            max-width: 260px;
-            width: 100%;
-            min-width: 200px;
-        }
-    }
-}
-
-.heart {
+.like-button {
     cursor: pointer;
     color: white;
-    transition: color 0.3s;
+    margin-bottom: 50px;
 
     .far:hover {
         color: red;
@@ -44,6 +29,7 @@
 }
 
 div .stars{
+    margin-bottom: 15px;
 
     div.star-div{
         cursor: pointer;
@@ -56,5 +42,20 @@ div .stars{
 
     div.star-div:hover ~ div.star-div{
         color: white;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .div-movie-page-div-content {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            margin-right: 0px;
+            max-width: 260px;
+            width: 100%;
+            min-width: 200px;
+        }
     }
 }
