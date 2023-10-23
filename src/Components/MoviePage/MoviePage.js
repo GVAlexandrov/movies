@@ -29,11 +29,21 @@ const MoviePage = () => {
         <div className='div-movie-page'>
             <h2>{movie.Title}</h2>
 
+            <div className="stars">
+                <h3>Rate</h3>
+
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                    <div className='star-div' key={value}>★</div>
+                ))}
+                <div>10 / 10</div>
+            </div>
+
             <div className='div-movie-page-div-content'>
                 <img
                     alt={movie.Title}
                     src={movie.Poster}
                 />
+
                 <div className='div-movie-page-div-content-info'>
                     <p>Year: {movie.Year}</p>
                     <p>Genre: {movie.Genre}</p>
@@ -42,23 +52,14 @@ const MoviePage = () => {
                     <p>Actors: {movie.Actors}</p>
                 </div>
 
-                <div className="like-button">
-                    <h3>Like</h3>
+            </div>
 
-                    <span id={id} className="heart">
-                        <i className="far fa-heart"></i>
-                    </span>
-                </div>
+            <div className="like-button">
+                <h3>Like</h3>
 
-
-                <div className="stars">
-                    <h3>Rate</h3>
-
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <div className='star-div' key={value}>★</div>
-                    ))}
-                    <div>10 / 10</div>
-                </div>
+                <span id={id} className="heart">
+                    <i className="far fa-heart"></i>
+                </span>
             </div>
         </div>
     )
