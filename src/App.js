@@ -29,8 +29,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/movies' element={<Movies />} />
+          <Route path='/movies/movie/:id' element={<MoviePage userEmail={userEmail} />} />
           <Route path='/my-movies' element={<MyMovies />} />
-          <Route path='/my-movies/movie/:id' element={<MoviePage userEmail={userEmail} />} />
 
           <Route path='/login' element={<LoginRegister />} />
           <Route path='/register' element={<LoginRegister />} />
