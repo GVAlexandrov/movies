@@ -2,8 +2,9 @@ import './MoviePage.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_URL } from '../../utils/utils';
+import { addFavouriteMovie } from '../../services/services';
 
-const MoviePage = () => {
+const MoviePage = ({ userEmail }) => {
     const { id } = useParams();
     const [movie, setMovie] = useState({});
     const [rate, setRate] = useState(0);
@@ -30,8 +31,16 @@ const MoviePage = () => {
     const likeMovie = function (e) {
         e.preventDefault();
 
-        if (e.target.className === 'far fa-heart' || e.target.className === 'far fa-heart liked') {
-            setLiked(!liked);
+        if (userEmail) {
+            addFavouriteMovie(id)
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(console.log)
+
+            if (e.target.className === 'far fa-heart' || e.target.className === 'far fa-heart liked') {
+                setLiked(!liked);
+            }
         }
     }
 
@@ -71,7 +80,6 @@ const MoviePage = () => {
                 </div>
 
             </div>
-
             <div className="like-button">
                 <h3>Like</h3>
 
