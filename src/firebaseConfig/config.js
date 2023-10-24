@@ -1,0 +1,1 @@
+export const URL = 'https://movies-ce449-default-rtdb.europe-west1.firebasedatabase.app/';
