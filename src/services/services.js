@@ -28,3 +28,16 @@ export const getAllFavouriteMovies = (typeOfElement) => {
         })
         .catch(error => console.log(error));
 }
+
+export const getOneFavouriteMovie = (movieId) => {
+    uid = localStorage.uid;
+
+    return fetch(`${URL}movies/${uid}/${movieId}/.json`)
+        .then(response => response.json())
+        .then(result => {
+            // console.log(uid);
+            // console.log(movieId);
+            return result;
+        })
+        .catch(error => console.log(error));
+}
