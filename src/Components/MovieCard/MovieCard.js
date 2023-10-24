@@ -5,7 +5,7 @@ const MovieCard = (movieObj) => {
 
     return (
         <div className='div-movie-card'>
-            <NavLink to={`/my-movies/movie/${movieObj.movieObj.imdbID}`}>
+            <NavLink to={`/movies/movie/${movieObj.movieObj.imdbID}`}>
                 <img
                     alt={movieObj?.movieObj.Title}
                     src={movieObj?.movieObj.Poster}
